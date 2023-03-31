@@ -75,7 +75,7 @@ app.use(passport.session());
 
 
 // Have Node serve the files for our built React app
-app.use(express.static(path.resolve(__dirname, '../client/build')));
+//app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 /**
  * Directs all routes starting with /api to the top level api express router
@@ -83,9 +83,9 @@ app.use(express.static(path.resolve(__dirname, '../client/build')));
 app.use("/api", apiRouter);
 
 // All other GET requests not handled before will return our React app
-app.get('*', (req, res) => {
+/* app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
-});
+}); */
 
 /**
  * Error handler middleware

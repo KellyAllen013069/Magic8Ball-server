@@ -4,10 +4,8 @@
   "description": "Magic-8-Ball deployment",
   "type": "module",
   "scripts": {
-    "build": "npm run build:client && npm run build:server",
-    "build:client": "cd client && npm run build",
-    "build:server": "cd server && npm run build",
-    "start": "node server/server.js"
+    "build": "npm run build",
+    "start": "babel-node index.js"
   },
   "engines": {
     "node": "16.x"
