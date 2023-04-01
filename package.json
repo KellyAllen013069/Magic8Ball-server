@@ -5,7 +5,7 @@
   "type":"module",
   "scripts": {
     "build": "npm run build",
-    "start": "node server.js"
+    "start": "node --experimental-modules server.js"
   },
   "engines": {
     "node": "16.x"
