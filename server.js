@@ -94,13 +94,11 @@ app.use("/api", apiRouter);
  app.use(errorHandler);
 /**
  * Bind the app to a specified port
- */
-if (process.env.PORT) {
-  app.listen(config.port || 8080, () =>
-    console.log(`Server listening on port ${config.port}...`)
-  );
-} else {
-  console.log("No port configured")
-}
+ */ 
+let port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}...`)
+});
+ 
 
 export default app;
