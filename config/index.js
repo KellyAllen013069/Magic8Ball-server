@@ -15,5 +15,4 @@ export default {
     password: process.env.DB_PASS,
     database: process.env.DB_SCHEMA,
   },
-  port: parseInt(process.env.PORT),
 };
