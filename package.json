@@ -2,6 +2,7 @@
   "name": "magic-8-ball",
   "version": "3.0.0",
   "description": "Magic-8-Ball deployment",
+  "type":"module",
   "scripts": {
     "build": "npm run build",
     "start": "node server.js"
