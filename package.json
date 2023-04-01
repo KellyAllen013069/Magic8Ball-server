@@ -2,10 +2,9 @@
   "name": "magic-8-ball",
   "version": "3.0.0",
   "description": "Magic-8-Ball deployment",
-  "type": "module",
   "scripts": {
     "build": "npm run build",
-    "start": "nodemon --exec babel-node --trace-warnings --trace-uncaught --async-stack-traces server.js"
+    "start": "node server.js"
   },
   "engines": {
     "node": "16.x"
