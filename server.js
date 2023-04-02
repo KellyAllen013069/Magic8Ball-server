@@ -26,7 +26,7 @@ app.use(express.urlencoded({extended: true}))
 
 app.use(cors(
   {
-    origin: "magic8ballclient.onrender.com",
+    origin: "https://magic8ballclient.onrender.com",
     credentials: true,
   }
 ));
