@@ -20,7 +20,7 @@ const gitHubStrategy =   new GitHubStrategy({
         //options for strategy
         clientID: process.env.GITHUB_CLIENT_ID,
         clientSecret: process.env.GITHUB_CLIENT_SECRET,
-        callbackURL: `${process.env.SERVER_URL}/api/authgithub/redirect`,
+        callbackURL: `https://magic8ballserver.onrender.com/api/authgithub/redirect`,
    
 }, (accessToken, refreshToken, profile, done) => {
      

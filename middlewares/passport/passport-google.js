@@ -21,7 +21,7 @@ const googleStrategy =   new GoogleStrategy({
         //options for strategy
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: `${process.env.SERVER_URL}/api/authgoogle/redirect`,
+        callbackURL: `https://magic8ballserver.onrender.com/api/authgoogle/redirect`,
    
 }, (accessToken, refreshToken, profile, done) => {
      
