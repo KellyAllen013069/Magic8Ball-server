@@ -4,14 +4,17 @@ const userRouter = express.Router();
 
 userRouter.get('/getUser', (req, res) => {
     if(req.user) {
+        console.log("user is " + req.user[0]);
         res.status(200).json({
             success: true,
             message: "successfull",
             user: req.user[0]
+            
         })
-    } else (
+    } else {
+        console.log("user not found");
         res.json({success: false, message: "unsuccessful"})
-    )
+    }
   });
 
 userRouter.get('/logout', (req, res, next) => {

@@ -10,10 +10,10 @@ if (!envFound) {
 // exports env variables for use
 export default {
   mysql: {
-    host: 'magic-8-ball.cuyrecwdjos6.us-east-1.rds.amazonaws.com',
-    user: 'admin',
-    password: 'KaNew54Life!qL',
-    database: 'magic8ball',
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_SCHEMA,
   },
 };
 
