@@ -35,8 +35,8 @@ authGitHubRouter.get("/login/failure", (req,res) => {
 }));
 
 authGitHubRouter.get("/redirect", passport.authenticate('github',{
-    successRedirect: "http://localhost:3000",
-    failureRedirct: "http://localhost:3000/login"
+    successRedirect: "https://magic8ballclient.onrender.com",
+    failureRedirct: "https://magic8ballclient.onrender.com/login"
 }), (req,res) => {
    
     res.send(req.user)

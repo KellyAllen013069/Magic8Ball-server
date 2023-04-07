@@ -33,8 +33,8 @@ authGoogleRouter.get("/login/failure", (req,res) => {
 }));
 
 authGoogleRouter.get("/redirect", passport.authenticate('google',{
-    successRedirect: "http://localhost:3000",
-    failureRedirct: "http://localhost:3000/login"
+    successRedirect: "https://magic8ballclient.onrender.com",
+    failureRedirct: "https://magic9ballclient.onrender.com/login"
 }), (req,res) => {
    
     res.send(req.user)
