@@ -3,6 +3,7 @@ import express from 'express';
 const userRouter = express.Router();
 
 userRouter.get('/getUser', (req, res) => {
+    console.log("req is " + JSON.stringify(req))
     if(req.user) {
         console.log("user is " + req.user[0]);
         res.status(200).json({
