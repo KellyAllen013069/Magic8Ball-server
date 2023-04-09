@@ -34,7 +34,7 @@ app.use(cors(
 /**
  * Logs incoming request information to the dev console
  */
- app.use(morgan("dev"));
+ app.use(morgan("combined"));
 
 
 /**
