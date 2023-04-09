@@ -21,6 +21,7 @@ authGitHubRouter.get("/login/success", (req,res) => {
 })
 
 authGitHubRouter.get("/login/failure", (req,res) => {
+        console.log("in login failure")
         res.status(401).json({
             success: false,
             message: "failure",
