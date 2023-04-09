@@ -4,6 +4,7 @@ const userRouter = express.Router();
 
 userRouter.get('/getUser', (req, res) => {
   try {
+    res.setHeader('Cache-Control', 'no-cache');
     console.log("*************in getuser**************");
     console.log("req is " + req.user);
     if(req.user) {

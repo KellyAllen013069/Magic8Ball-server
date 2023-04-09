@@ -23,8 +23,8 @@ passport.use(localStrategy)
 
 authLocalRouter.post('/login', passport.authenticate('local', {
   failureFlash: true,
-  failureRedirect:'http://localhost:5001/api/authlocal/login-failure'}), (req, res) => {
-  res.redirect('http://localhost:5001/api/authlocal/login-success');
+  failureRedirect:'https://magic8ballserver.onrender.com/api/authlocal/login-failure'}), (req, res) => {
+  res.redirect('https://magic8ballclient/api/authlocal/login-success');
 });
 
 
@@ -63,12 +63,10 @@ authLocalRouter.post("/register", async (req, res, next) => {
 
 
 authLocalRouter.get("/login-success", (req,res) => {
-    //res.send("SUCCESS");
     res.status(200).json({
       success: "true",
       message: "Login successful!"
     })
-    //res.redirect('http://localhost:3000/')
 })
 
 authLocalRouter.get("/login-failure", (req, res) => {
