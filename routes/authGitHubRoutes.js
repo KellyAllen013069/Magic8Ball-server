@@ -32,13 +32,14 @@ authGitHubRouter.get("/login/failure", (req,res) => {
 
  authGitHubRouter.get("/login", passport.authenticate('github', {
     scope: ['profile']
-}));
+}
+));
 
 authGitHubRouter.get("/redirect", passport.authenticate('github',{
     successRedirect: "https://magic8ballclient.onrender.com",
     failureRedirct: "https://magic8ballclient.onrender.com/login"
 }), (req,res) => {
-   
+   console.log("sending user from github route")
     res.send(req.user)
 });
 
