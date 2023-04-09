@@ -4,7 +4,7 @@ const userRouter = express.Router();
 
 userRouter.get('/getUser', (req, res) => {
     console.log("*************in getuser**************");
-    console.log("req is " + JSON.stringify(req));
+    console.log("req is " + CircularJSON.stringify(req));
     if(req.user) {
         console.log("user is " + req.user[0]);
         res.status(200).json({
