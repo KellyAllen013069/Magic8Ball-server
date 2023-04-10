@@ -5,10 +5,12 @@ import dotenv from "dotenv";
 
 
 passport.serializeUser((user,done)=> {
+    console.log("serializing user")
     done(null,user.id)
 })
 
  passport.deserializeUser((id,done)=> {
+    console.log("deserializing user")
     userFunctions.findUserById(id).then((user) => {
         done(null, user);
     }).catch(err => console.log(err))

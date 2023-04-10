@@ -7,7 +7,7 @@ userRouter.get('/getUser', (req, res) => {
     res.setHeader('Cache-Control', 'no-cache');
     console.log("*************in getuser**************");
     console.log("req is " + req.user);
-    if(req.user) {
+    if(req.isAuthenticated) {
       console.log("user is " + req.user[0]);
       res.status(200).json({
         success: true,
