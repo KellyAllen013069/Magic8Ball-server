@@ -8,7 +8,7 @@ userRouter.get('/getUser', (req, res) => {
     console.log("*************in getuser**************");
     console.log("req is " + req.user);
     if(req.isAuthenticated) {
-      console.log("user is " + req.user[0].name);
+      console.log("user is " + JSON.stringify(req.user[0]));
       res.status(200).json({
         success: true,
         message: "successfull",
