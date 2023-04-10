@@ -8,7 +8,7 @@
     "start": "node --experimental-modules server.js"
   },
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "keywords": [
     "express",
