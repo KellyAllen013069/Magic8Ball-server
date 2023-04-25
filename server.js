@@ -59,8 +59,9 @@ app.use(session({
   secure: true,
   cookie: { 
     maxAge: 86400000,
-    path: '/'
-  } 
+    path: '/',
+    secure: true
+  }
 }));
 
 /**
