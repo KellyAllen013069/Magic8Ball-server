@@ -56,6 +56,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   store: sessionStore,
+  secure: true,
   cookie: { 
     maxAge: 86400000,
     path: '/'
