@@ -24,13 +24,10 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
 
-app.use(cors(
-  {
-    origin: "*",
+app.use(cors({
+    origin: ["https://magic8ballclient.onrender.com", "https://magic8ballserver.onrender.com"],
     credentials: true,
-  }
-));
-
+}));
 /**
  * Logs incoming request information to the dev console
  */
