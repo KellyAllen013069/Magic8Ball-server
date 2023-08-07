@@ -7,16 +7,16 @@ const authGoogleRouter = express.Router();
 
 passport.use(googleStrategy);
 
-authGoogleRouter.get("/login/success", (req,res) => { 
+authGoogleRouter.get("/login/success", (req,res) => {
     if(req.user) {
         res.status(200).json({
             success: true,
             message: "success",
             user: req.user,
-           
+
         })
     }
-    
+
 })
 
 authGoogleRouter.get("/login/failure", (req,res) => {
@@ -33,8 +33,8 @@ authGoogleRouter.get("/login/failure", (req,res) => {
 }));
 
 authGoogleRouter.get("/redirect", passport.authenticate('google',{
-    successRedirect: "https://magic8ballclient.onrender.com",
-    failureRedirect: "https://magic8ballclient.onrender.com/login"
+    successRedirect: "https://magic8ballserver.onrender.com",
+    failureRedirect: "https://magic8ballserver.onrender.com/login"
 }), (req,res) => {
     console.log("middleware sending" + req.user);
     res.send(req.user)
