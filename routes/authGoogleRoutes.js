@@ -32,9 +32,9 @@ authGoogleRouter.get("/login/failure", (req,res) => {
     scope: ['profile']
 }));
 
-authGoogleRouter.get("/redirect", passport.authenticate('google',{
-    successRedirect: "https://magic8ballserver.onrender.com",
-    failureRedirect: "https://magic8ballserver.onrender.com/login"
+authGoogleRouter.get("/redirect", passport.authenticate('google', {
+    successRedirect: "https://magic8ballserver.onrender.com/api/authgoogle/redirect",
+    failureRedirect: "https://magic8ballserver.onrender.com/api/authgoogle/redirect"
 }), (req,res) => {
     console.log("middleware sending" + req.user);
     res.send(req.user)

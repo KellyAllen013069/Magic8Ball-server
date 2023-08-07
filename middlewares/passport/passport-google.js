@@ -16,6 +16,7 @@ passport.serializeUser((user,done)=> {
 
 });
 
+console.log(process.env.GOOGLE_CLIENT_ID, process.env.GOOGLE_CLIENT_SECRET, 'https://magic8ballserver.onrender.com/api/authgoogle/redirect');
 
 const googleStrategy =   new GoogleStrategy({
         //options for strategy
