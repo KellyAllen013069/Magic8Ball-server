@@ -4,6 +4,8 @@ import GoogleStrategy from 'passport-google-oauth20';
 import userFunctions from "../../controllers//users.controller.js";
 import dotenv from "dotenv";
 
+console.log("GOOGLE strategy being used.")
+
 passport.serializeUser((user,done)=> {
     done(null,user.id)
 })
